@@ -1,0 +1,73 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+  flex-direction: column;
+  gap: 10px;
+  background-image: url("./images/bg.webp");
+}
+.result {
+  background-color: rgba(255, 255, 255, 0.657);
+  padding: 0.3rem 0.5rem;
+}
+.btn {
+  padding: 0.2rem 0.4rem;
+  outline: none;
+  font-size: 1.1rem;
+  cursor: pointer;
+  background-color: orange;
+  border-color: rgb(145, 118, 65);
+  /* border-bottom: 2px solid transparent;? */
+  border-radius: 3px;
+}
+.btn:active {
+  /* border-bottom: 2px solid rgb(145, 118, 65); */
+}
+.grid {
+  /* border: 1px solid black; */
+  position: relative;
+  width: 560px;
+  height: 300px;
+  /* margin-top: 3rem; */
+  /* background-color: rgb(156, 53, 62); */
+  background-color: rgba(94, 26, 32, 0.874);
+  box-shadow: inset 0 0 2px 5px rgba(115, 114, 114, 0.358);
+}
+.block {
+  background-color: blue;
+  background-image: linear-gradient(90deg, yellow, greenyellow);
+  width: 100px;
+  height: 20px;
+  position: absolute;
+  box-shadow: inset 0 0 1px 2px rgba(0, 0, 0, 0.109);
+}
+.user {
+  background-color: purple;
+  background-image: linear-gradient(90deg, rgb(54, 176, 252), rgb(2, 219, 247));
+  width: 100px;
+  height: 20px;
+  position: absolute;
+  box-shadow: inset 0 0 2px 2px rgba(6, 46, 61, 0.53);
+}
+.ball {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: red;
+  background-image: linear-gradient(90deg, rgb(252, 209, 54), rgb(247, 76, 2));
+  box-shadow: inset 0 0 2px 2px rgba(6, 46, 61, 0.257);
+}
