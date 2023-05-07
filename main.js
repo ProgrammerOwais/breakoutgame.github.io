@@ -21,6 +21,8 @@ let xDirection = -2;
 let yDirection = 2;
 let ballTimer;
 let ballDiameter = 20;
+// check the ball movement
+let isMoving = true;
 
 class Block {
   constructor(xAxis, yAxis) {
@@ -107,10 +109,10 @@ function drawBall(params) {
 }
 let playsound = 0;
 function moveBall(params) {
+  if (isMoving) requestAnimationFrame(moveBall);
   ballCurrentPosition[0] += xDirection;
   ballCurrentPosition[1] += yDirection;
   drawBall();
-
   checkForCollisions();
 }
 
@@ -140,7 +142,8 @@ function checkForCollisions(params) {
       if (blocks.length === 0) {
         result.textContent = "You Win";
         playAgain.style.display = "block";
-        clearInterval(ballTimer);
+        // cancelAnimationFrame(ballTimer);
+        isMoving = false;
         document.removeEventListener("keydown", moveUser);
         winSound.play();
         bgSound.pause();
@@ -168,8 +171,8 @@ function checkForCollisions(params) {
     changeDiraction();
   }
   if (ballCurrentPosition[1] <= 0) {
-    // check for bottom border collision
-    clearInterval(ballTimer);
+    isMoving = false;
+    // cancelAnimationFrame(ballTimer);
     result.textContent = "You Lose";
     loseSound.play();
     bgSound.pause();
@@ -198,7 +201,7 @@ function changeDiraction(params) {
   }
 }
 start.addEventListener("click", () => {
-  ballTimer = setInterval(moveBall, 20);
+  ballTimer = requestAnimationFrame(moveBall);
   bgSound.play();
   start.style.display = "none";
 });
