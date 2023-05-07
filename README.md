@@ -1,6 +1,6 @@
 # BreakOut Game
 
-Live Site:
+Live Site: https://programmerowais.github.io/breakoutgame.github.io/
 
 ## Technologies
 
