@@ -4,6 +4,6 @@ Live Site: https://programmerowais.github.io/breakoutgame.github.io/
 
 ## Technologies
 
-HTML,CSS,JAVASCRIPT,requestAnimationFrame
+HTML,CSS,JAVASCRIPT,requestAnimationFrame , etc.checking...
 
-### Modified Form of Ania Kubow game
+### Modified Form of Ania Kubow game 
